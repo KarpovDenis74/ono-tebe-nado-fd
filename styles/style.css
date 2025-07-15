@@ -1,12 +1,16 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 150px 1fr;
-  grid-template-rows: 292px;
+
   grid-template-areas: "nav logo address";
   justify-items: center;
   align-items: center;
   align-content: center;
   width: 1100px;
+  padding: 90px 0 0 0;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .header__menu {
@@ -18,28 +22,32 @@
   margin-right: auto;
   padding: 0 0 0 50px;
   color: #000;
-  font-weight: normal;
-  font-size: 18px;
 }
 
 .header__links-list {
   display: flex;
   flex-wrap: nowrap;
-  gap: 29px;
+  gap: 12px;
 }
 
 .header__links-list-item {
   align-self: center;
   text-decoration: underline;
-  list-style-position: outside;
+  text-underline-offset: 4px;
+  list-style-position: inside;
   list-style-type: circle;
+
 }
 
 .header__links-list-item_no-bullit {
+  /* text-decoration в данном случае сбрасывает подчеркивание у списка, а не у ссылки */
   text-decoration: none;
   list-style-type: none;
 }
 
+.header__links-list-item_no-active {
+  text-decoration: none;
+}
 .header__logo {
   display: flex;
   grid-area: logo;
@@ -52,41 +60,36 @@
 .address {
   display: flex;
   flex-direction: column;
-  grid-area: address;
   justify-self: end;
   align-self: center;
-  padding: 50px;
   font-style: normal;
+  line-height: 130%;
+  text-underline-offset: 4px;
 }
 
-.address__list {
-  display: flex;
-  flex-direction: column;
-  width: 240px;
-  padding: 0 1px 0 0;
+.address__header {
+  grid-area: address;
+  padding: 0 60px 0 185px;
+  padding-left: 185px;
   font-size: 18px;
-  font-style: normal;
-  line-height: 1.3em;
-  letter-spacing: 0.1px;
-  text-decoration: underline;
-  list-style-type: none;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   width: 1100px;
+  margin-top: 95px;
 }
 
 .cover {
   position: relative;
   display: flex;
-  justify-self: center;
   flex-direction: column;
+  justify-self: center;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
   background: url(../images/cover.jpg) center/cover;
 }
 
@@ -101,21 +104,18 @@
 
 .cover__title {
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 166px 0 110px 0;
+  padding: 166px 0 0 0;
   color: #fff;
   font-weight: bold;
   font-size: 100px;
+  letter-spacing: 29px;
   word-spacing: 70px;
 }
 
 .aligned-text {
   z-index: 1;
-  display: flex;
+  display: block;
   width: 100%;
-  height: 115px;
   padding-left: 50px;
 }
 
@@ -123,21 +123,15 @@
   z-index: 1;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 115px;
-  padding-left: 25px;
+  padding: 18px 0 0 30px;
 }
 
 .aligned-text_right {
   z-index: 1;
   display: flex;
   justify-content: end;
-  height: 115px;
+  padding-top: 18px;
   padding-right: 25px;
-}
-
-.no-letter-spacing {
-  letter-spacing: 29px;
 }
 
 .cover__description {
@@ -146,7 +140,7 @@
   align-items: center;
   width: 100%;
   margin-left: auto;
-  padding: 0 50px;
+  padding: 102px 50px 0 50px;
   color: #fff;
   font-weight: 100;
   font-size: 22px;
@@ -163,14 +157,13 @@
   z-index: 1;
   display: flex;
   justify-self: end;
-  width: 258px;
+  min-width: 258px;
   min-height: 50px;
   margin-left: auto;
   border: #fff solid 1px;
   padding: 9px 30px;
-
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   background: transparent;
@@ -184,7 +177,6 @@
 }
 
 .lots__heading {
-  z-index: 2;
   display: flex;
   align-self: start;
   min-width: 100%;
@@ -198,7 +190,8 @@
 
 .lots__card-list {
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: space-between;
   column-gap: 25px;
   width: 100%;
 
@@ -209,12 +202,23 @@
   position: relative;
   justify-content: space-between;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
+}
+
+.card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 .card_type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
+  padding: 47px 40px 50px 40px;
 }
 
 .card_type_film {
@@ -229,18 +233,10 @@
   background: url(../images/card-lot-03.jpg) no-repeat center / cover;
 }
 
-.card-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 48px 40px 48px 40px;
-}
-
 .card__title {
+  position: relative;
   z-index: 1;
   display: flex;
-  flex-grow: 2;
   color: #fff;
   font-weight: bold;
   font-size: 22px;
@@ -249,6 +245,7 @@
 }
 
 .card__text {
+  position: relative;
   z-index: 1;
   display: flex;
   color: #fff;
@@ -259,18 +256,18 @@
 }
 
 .lots__look-more-link {
-  display: flex;
-  justify-self: start;
+  display: inline-block;
   padding: 30px 0 0 40px;
   font-weight: 100;
   font-size: 20px;
   text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .about {
   display: grid;
   grid-template-columns: 380px 1fr;
-  grid-template-rows: 240px 1fr;
+
   margin-top: 154px;
 }
 
@@ -296,19 +293,11 @@
   width: 148px;
 }
 
-.about__t {
-  display: flex;
-  flex-direction: column;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  align-self: center;
-  max-width: 885px;
-}
-
 .about__title {
   display: flex;
-  justify-self: center;
-  align-self: start;
+  flex-direction: column;
+  justify-self: start;
+   align-self: start;
   padding: 100px 0;
   font-weight: bold;
   font-size: 40px;
@@ -322,7 +311,7 @@
   grid-row: 2/3;
   gap: 30px;
   align-self: start;
-  padding: 5px 30px 0 0;
+  padding: 0 30px 0 0;
 }
 
 .about__text {
@@ -332,8 +321,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 90px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "footer_address footer_menu footer_social";
   justify-items: center;
   justify-content: center;
@@ -342,25 +330,27 @@
   width: 100vw;
   max-width: 1100px;
   margin-top: 180px;
-  padding: 0 50px 0 50px;
+  padding: 0 50px 90px 50px;
 }
 
 .footer_address {
+  display: flex;
+  flex-direction: column;
   grid-area: footer_address;
   justify-self: start;
   align-self: start;
-  padding: 0;
-  font-size: 20px;
-  letter-spacing: 0.1px;
-  list-style-type: none;
+  padding: 0 50px 0 0;
+  font-size: 18px;
 }
+
 
 .footer__menu {
   display: flex;
   grid-area: footer_menu;
-  justify-self: center;
+  justify-self: start;
   align-self: start;
   margin: 0 auto;
+  font-size: 18px;
 }
 
 .footer__menu-list {
@@ -372,24 +362,32 @@
 .footer__menu-list-item {
   align-self: center;
   text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .footer__social-list {
   display: flex;
+  justify-items: end;
   grid-area: footer_social;
   justify-self: end;
+  gap: 48px;
   list-style: none;
 }
 
 .footer__social-list-item {
+  display: flex;
+  justify-self: end;
+}
+
+.footer__social-list-item__link {
+  display: flex;
+  justify-self: end;
+}
+
+.footer__social-list-item__icon {
   width: 48px;
-  margin-left: 48px;
 }
 
-.footer__social-list-item:first {
-  margin-left: 0;
-}
-
-.footer__menu-link_active {
+.footer__menu-list-item_active {
   text-decoration: none;
 }
