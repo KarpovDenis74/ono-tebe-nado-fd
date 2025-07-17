@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-    <link rel="stylesheet" href="./fonts/fonts.css">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header class="header">
       <nav class="header__menu">
         <ul class="header__links-list">
-          <li class="header__links-list-item header__links-list-item_no-bullit">
-            <a href="#0" class="header__links-list-item_no-active">главная</a>
+          <li
+            class="address__links-list-item address__links-list-item_no-bullit"
+          >
+            <a href="#0" class="address__links-list-item_active">главная</a>
           </li>
-          <li class="header__links-list-item">
+          <li class="address__links-list-item">
             <a href="#lots">посмотреть лоты</a>
           </li>
-          <li class="header__links-list-item"><a href="#about">об аукционе</a></li>
+          <li class="address__links-list-item">
+            <a href="#about">об аукционе</a>
+          </li>
         </ul>
       </nav>
       <a href="#0" class="header__logo">
@@ -27,31 +31,31 @@
           src="images/logo-black.svg"
           alt="логотип"
           class="header__logo-image"
-        >
+        />
       </a>
       <address class="address address__header">
-            <a href="tel:+99995555555">+9 999 555 5555</a>
-            <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-            <p>наб. Принсенграхт 263-265, Амстердам</p>
+        <a href="tel:+99995555555">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p>наб. Принсенграхт 263-265, Амстердам</p>
       </address>
     </header>
     <main class="main">
       <section class="cover">
         <h1 class="cover__title">
-          <span class="aligned-text">
-            ОНО
-          </span>
-          <span class="aligned-text_center">
+          <span class="cover__title__aligned aligned-text"> ОНО </span>
+          <span
+            class="cover__title__aligned cover__title__aligned_flex aligned-text_center"
+          >
             ТЕБЕ
           </span>
-          <span class="aligned-text_right">
+          <span
+            class="cover__title__aligned cover__title__aligned_flex aligned-text_right"
+          >
             НАДО
           </span>
         </h1>
         <div class="cover__description">
-          <p class="cover__description-text">
-            Аукцион вещей, в которые никто не верил
-          </p>
+          <p>Аукцион вещей, в которые никто не верил</p>
           <button type="button" class="bet-button">Сделать ставку</button>
         </div>
         <div class="overlay"></div>
@@ -62,17 +66,16 @@
           <li class="lots__card-list-item">
             <a href="#0" class="card-link">
               <article class="card_type card_type_film">
-                  <h3 class="card__title">
-                    Фильм режиссёра, который бросил киношколу
-                  </h3>
-                  <p class="card__text">
-                    Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-                    ставка, если бы вы не знали, что режиссёр — Пол Томас
-                    Андерсон?
-                  </p>
-                
+                <h3 class="card__title">
+                  Фильм режиссёра, который бросил киношколу
+                </h3>
+                <p class="card__text">
+                  Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
+                  ставка, если бы вы не знали, что режиссёр — Пол Томас
+                  Андерсон?
+                </p>
+                <div class="overlay"></div>
               </article>
-              <div class="overlay"></div>
             </a>
           </li>
           <li class="lots__card-list-item">
@@ -116,10 +119,10 @@
       <section class="about" id="about">
         <div class="about__logo">
           <img
-            class="about__logo-image" 
-            src="images/logo-white.svg" 
-            alt="логотип компании" 
-          >
+            class="about__logo-image"
+            src="images/logo-white.svg"
+            alt="логотип компании"
+          />
         </div>
         <h2 class="about__title">Об аукционе</h2>
         <div class="about_paragraph">
@@ -143,33 +146,50 @@
     </main>
     <footer class="footer">
       <address class="address footer_address">
-          <a href="tel:+99995555555">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          <p>наб. Принсенграхт 263-265,</p><p> Амстердам</p>
+        <a href="tel:+99995555555">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p>наб. Принсенграхт 263-265,</p>
+        <p>Амстердам</p>
       </address>
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-list-item footer__menu-list-item_active">
-            <a href="#0" class="header__links-list-item_no-active">главная</a>
+            <a href="#0" class="address__links-list-item_active">главная</a>
           </li>
-          <li class="footer__menu-list-item"><a href="#lots">посмотреть лоты</a></li>
-          <li class="footer__menu-list-item"><a href="#about">об аукционе</a></li>
+          <li class="footer__menu-list-item">
+            <a href="#lots">посмотреть лоты</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#about">об аукционе</a>
+          </li>
         </ul>
       </nav>
       <ul class="footer__social-list">
         <li class="footer__social-list-item">
-          <a href="#0">
-            <img src="images/yt.svg" alt="иконка" class="footer__social-list-item__icon">
+          <a href="#0" class="footer__social-list-item__link">
+            <img
+              src="images/yt.svg"
+              alt="иконка"
+              class="footer__social-list-item__icon"
+            />
           </a>
         </li>
         <li class="footer__social-list-item">
           <a href="#0" class="footer__social-list-item__link">
-            <img src="images/vk.svg" alt="иконка" class="footer__social-list-item__icon">
+            <img
+              src="images/vk.svg"
+              alt="иконка"
+              class="footer__social-list-item__icon"
+            />
           </a>
         </li>
         <li class="footer__social-list-item">
           <a href="#0">
-            <img src="images/pinterest.svg" alt="иконка" class="footer__social-list-item__icon">
+            <img
+              src="images/pinterest.svg"
+              alt="иконка"
+              class="footer__social-list-item__icon"
+            />
           </a>
         </li>
       </ul>

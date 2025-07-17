@@ -14,56 +14,46 @@
 }
 
 .header__menu {
-  display: flex;
-  flex-wrap: nowrap;
   grid-area: nav;
   justify-content: center;
   align-content: center;
-  margin-right: auto;
-  padding: 0 0 0 50px;
   color: #000;
 }
 
 .header__links-list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 12px;
-}
-
-.header__links-list-item {
-  align-self: center;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  list-style-position: inside;
+  width: 100%;
+  padding-left: 35px;
+  list-style-position: outside;
   list-style-type: circle;
-
 }
 
-.header__links-list-item_no-bullit {
-  /* text-decoration в данном случае сбрасывает подчеркивание у списка, а не у ссылки */
-  text-decoration: none;
+.address__links-list-item {
+  align-self: center;
+  float: left;
+  margin-right: 30px;
+  text-underline-offset: 4px;
+  list-style-position: outside;
+}
+
+.address__links-list-item_no-bullit {
   list-style-type: none;
 }
 
-.header__links-list-item_no-active {
+.address__links-list-item_active {
   text-decoration: none;
 }
 .header__logo {
-  display: flex;
   grid-area: logo;
 }
 
 .header__logo-image {
-  width: 140px;
+  width: 135px;
 }
 
 .address {
-  display: flex;
-  flex-direction: column;
-  justify-self: end;
-  align-self: center;
+  font-size: 18px;
   font-style: normal;
-  line-height: 130%;
+  line-height: 135%;
   text-underline-offset: 4px;
 }
 
@@ -71,7 +61,6 @@
   grid-area: address;
   padding: 0 60px 0 185px;
   padding-left: 185px;
-  font-size: 18px;
 }
 
 .main {
@@ -112,23 +101,26 @@
   word-spacing: 70px;
 }
 
-.aligned-text {
+.cover__title__aligned {
   z-index: 1;
+}
+
+.aligned-text {
   display: block;
   width: 100%;
   padding-left: 50px;
 }
 
-.aligned-text_center {
-  z-index: 1;
+.cover__title__aligned_flex {
   display: flex;
+}
+
+.aligned-text_center {
   justify-content: center;
   padding: 18px 0 0 30px;
 }
 
 .aligned-text_right {
-  z-index: 1;
-  display: flex;
   justify-content: end;
   padding-top: 18px;
   padding-right: 25px;
@@ -147,10 +139,6 @@
 
   text-transform: uppercase;
   word-spacing: 18px;
-}
-
-.cover__description-text {
-  display: flex;
 }
 
 .bet-button {
@@ -177,11 +165,7 @@
 }
 
 .lots__heading {
-  display: flex;
-  align-self: start;
-  min-width: 100%;
-  margin-bottom: 30px;
-
+  margin-bottom: 25px;
   padding: 180px 0 0 40px;
   font-weight: bold;
   font-size: 40px;
@@ -192,7 +176,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  column-gap: 25px;
+  gap: 25px;
   width: 100%;
 
   list-style: none;
@@ -218,7 +202,7 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 47px 40px 50px 40px;
+  padding: 50px 40px 50px 40px;
 }
 
 .card_type_film {
@@ -236,9 +220,7 @@
 .card__title {
   position: relative;
   z-index: 1;
-  display: flex;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -247,7 +229,6 @@
 .card__text {
   position: relative;
   z-index: 1;
-  display: flex;
   color: #fff;
   font-size: 20px;
   font-style: normal;
@@ -294,10 +275,6 @@
 }
 
 .about__title {
-  display: flex;
-  flex-direction: column;
-  justify-self: start;
-   align-self: start;
   padding: 100px 0;
   font-weight: bold;
   font-size: 40px;
@@ -329,7 +306,7 @@
   align-content: center;
   width: 100vw;
   max-width: 1100px;
-  margin-top: 180px;
+  margin-top: 185px;
   padding: 0 50px 90px 50px;
 }
 
@@ -340,15 +317,10 @@
   justify-self: start;
   align-self: start;
   padding: 0 50px 0 0;
-  font-size: 18px;
 }
 
-
 .footer__menu {
-  display: flex;
   grid-area: footer_menu;
-  justify-self: start;
-  align-self: start;
   margin: 0 auto;
   font-size: 18px;
 }
@@ -374,15 +346,6 @@
   list-style: none;
 }
 
-.footer__social-list-item {
-  display: flex;
-  justify-self: end;
-}
-
-.footer__social-list-item__link {
-  display: flex;
-  justify-self: end;
-}
 
 .footer__social-list-item__icon {
   width: 48px;
