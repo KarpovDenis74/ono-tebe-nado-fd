@@ -1,7 +1,6 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 150px 1fr;
-
   grid-template-areas: "nav logo address";
   justify-items: center;
   align-items: center;
@@ -27,7 +26,7 @@
   list-style-type: circle;
 }
 
-.address__links-list-item {
+.links-list-item {
   align-self: center;
   float: left;
   margin-right: 30px;
@@ -35,11 +34,11 @@
   list-style-position: outside;
 }
 
-.address__links-list-item_no-bullit {
+.links-list-item_no-bullit {
   list-style-type: none;
 }
 
-.address__links-list-item_active {
+.links-list-item_active {
   text-decoration: none;
 }
 .header__logo {
@@ -136,7 +135,6 @@
   color: #fff;
   font-weight: 100;
   font-size: 22px;
-
   text-transform: uppercase;
   word-spacing: 18px;
 }
